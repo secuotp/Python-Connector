@@ -1,19 +1,20 @@
-from com.secuotp.model import ArrayList
+from com.secuotp.model.list import ArrayList as moduleList
 
 __author__ = 'zenology'
 
-class DoubleArrayList (ArrayList):
+
+class DoubleArrayList(moduleList.ArrayList):
     __key = []
 
     def add(self, key, value):
         super(DoubleArrayList, self).add(value)
         self.__key.append(key)
 
-    def getValue(self, index):
-        return super(DoubleArrayList, self).getValue(index)
+    def get_value(self, index):
+        return super(DoubleArrayList, self).get(index)
 
-    def getKey(self, index):
-        return self.__keyp[index]
+    def get_key(self, index):
+        return self.__key[index]
 
     def remove(self, index):
         i = index + 1
